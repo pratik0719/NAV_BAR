@@ -1,0 +1,163 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar Container */
+.navbar {
+    background-color: #e9e0e0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+}
+
+/* Left Section: Logo and Search */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* LinkedIn Logo Styling */
+.logo {
+    color: #0a66c2;
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.logo:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+}
+
+/* Search Box Styling */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #eef3f8;
+    border-radius: 4px;
+    padding: 0 8px;
+    width: 280px;
+    height: 34px;
+}
+
+.search-box i {
+    color: #666666;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: #000000;
+}
+
+.search-box input::placeholder {
+    color: #666666;
+}
+
+/* Right Section: Navigation Menu */
+.navbar-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 0;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+    height: 52px;
+    justify-content: center;
+    color: #666666;
+    font-size: 12px;
+    transition: color 0.2s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #000000;
+}
+
+
+.nav-item.active .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #000000;
+}
+
+/* Icon Styling */
+.nav-link i {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+/* Profile Link Styling */
+.profile-link {
+    flex-direction: row;
+    gap: 4px;
+}
+
+.profile-img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Content Area - For Demo Purposes */
+.content {
+    margin-top: 80px;
+    padding: 20px;
+    text-align: center;
+}
+/* for heading */
+.content h1 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+/* for paragraph */
+.content p {
+    color: #666666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-box {
+        width: 180px;
+    }
+}
